@@ -3,12 +3,10 @@
     background-color: rgb(167, 161, 161);
     display: flex;
     justify-content: space-between;
-    height: 80px;
     align-items: center;
     font-family: impact;
-    position: sticky;
     top: 0;
-    z-index: 1000;
+ 
 }
 .heading-title {
     margin-left: 10px;
@@ -21,7 +19,7 @@
     font-weight: 100;
 }
 
-ul {
+.nav-bar {
     display: flex;
     list-style-type: none;
     margin-right: 10px;
@@ -184,23 +182,73 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .section1-title {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .about-info {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0;
+    }
+    .about-section {
+        width: 100%;
+    }
     .about-container {
         flex-direction: column;
+        margin-left: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 0;
     }
     .events-countainer {
         flex-direction: column;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .event-list {
+        margin-left: 14px;
     }
     .header {
         flex-direction: column;
     }
     .nav-link {
-        color: rgb(203, 3, 3);
+        color: rgb(246, 238, 238);
+        border-right: none;
+        margin: 0;
+        padding: 4px;
+        font-size: 16px;
     }
     .food-trucks{
-        width: 200px;
+        width: 300px;
+       margin-left: 18px;
     }
     .paint-pic {
         width: 300px;
+    }
+    .nav-bar {
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        margin-right: 0px;
+        margin-bottom: 0;
+        margin-top: 0;
+        display: flex;
+    }
+    .heading-title {
+        margin-left: 0px;
+        padding: 0;
+        margin-bottom: 0;
+        font-size: 24px;
+        margin-top: 0;
+    }
+    .dates {
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
     }
 }
 
@@ -247,9 +295,35 @@ ul {
 @media (max-width: 768px) {
     .location-container {
         flex-direction: column;
+        padding: 0;
+    }
+    .location-title {
+        margin-left: 6px;
+        margin-bottom: 16px;
+        font-size: 34px;
+    }
+    .venue-title {
+        font-size: 26px;
+        margin-left: 6px;
+        margin-top: 10px;
     }
     .location-pic-container {
         flex-direction: column;
+        margin-top: 12px;
+    }
+    .location-image {
+        margin-left: 6px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 96%;
+    }
+    .address {
+        font-size: 16px;
+        margin-bottom: 0;
+        margin-left: 6px;
+        margin-top: 10px;
+        padding: 0;
+        line-height: 100%;
     }
 }
 
@@ -257,7 +331,8 @@ ul {
 
 .event-page-container {
     display: flex;
-    width: 800px;
+    max-width: 800px;
+    width: 90%;
     height: 1240px;
     background-color: lightblue;
     margin-left: 350px;
@@ -330,9 +405,30 @@ tr {
 @media (max-width: 768px) {
     .event-page-container {
         flex-direction: column;
+        margin: 14px;
+        width: 85%;
+        height: 90%;
+    }
+    .events-title {
+        font-size: 26px;
+        text-align: center;
+        margin-left: 0;
+    }
+    .fireworks {
+        width: 75%;
     }
     .listed-events {
         flex-direction: column;
+        border-left: none;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0px;
+    }
+    .concert {
+        width: 75%;
+    }
+    .beer {
+        width: 75%;
     }
 }
 /*CONTACT US PAGE*/
@@ -413,11 +509,57 @@ tr {
 }
 
 @media (max-width: 768px) {
+    .contact-title {
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 0;
+        margin-top: 4px;
+    }
+    .contact-p {
+        font-size: 16px;
+        margin-top: 2px;
+        margin-bottom: 8px;
+        margin-right: 2px;
+        text-align: center;
+    }
     .contact-container {
         flex-direction: column;
+        margin-left: 0;
+        height: 100%;
     }
     .form-container {
         flex-direction: column;
+        margin-left: 4px;
+        margin-right: 10px;
+        width: 80%;
+        height: 290px;
+        margin-bottom: 8px;
+    }
+    .submit {
+        width: 80px;
+        height: 30px;
+        font-size: 16px;
+    }
+    .form-title {
+        font-size: 20px;
+        margin: 2px;
+    }
+    .name-box {
+        width: 120px;
+    }
+    .phone-box {
+        width: 252px;
+    }
+    .email-box {
+        width: 252px;
+    }
+    .message-box {
+        width: 252px;
+    }
+    .contact-info {
+        text-align: center;
+        margin: 2px;
+        padding-bottom: 8px;
     }
 }
 
@@ -586,10 +728,50 @@ tr {
 }
 
 @media (max-width:768px) {
+    .food-subtitle {
+        border-top: 4px solid black;
+    }
     .food-container {
         flex-direction: column;
     }
+    .food-section-left {
+        margin: 20px;
+        width: 85%;
+    }
+    .food-title {
+        margin-top: 4px;
+    }
     .food-menu-container {
         flex-direction: column;
+        width: 85%;
+        margin: 20px;
+    }
+    .menu-title {
+        margin: 10px;
+        padding: 12px;
+    }
+    .menu-subtitle {
+        padding-top: 10px;
+    }
+    .menu-section1 {
+        border-right: none;
+        margin-top: 6px;
+    }
+    .menu-section2 {
+        border-right: none;
+    }
+    .menu-section3 {
+        border-right: none;
+    }
+    .menu-section4 {
+        border-right: none;
+    }
+    .food-truck-menu-pic {
+        border-top: none;
+    }
+    .menu-dates {
+    font-size: 28px;
+    padding-top: 8px;
+    margin-top: 36px;
     }
 }
